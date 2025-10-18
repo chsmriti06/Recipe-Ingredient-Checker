@@ -47,5 +47,5 @@ build/
 Thumbs.db
 
 # Data (if large)
-src/data/*.json
+#src/data/*.json
 #####
