@@ -146,6 +146,9 @@ function RecipeDetail({ recipe, onBack }) {
         <section className="ingredients-detail">
           <h3>📝 Ingredients:</h3>
           <ul className="ingredients-list">
+            <div>
+              
+            </div>
             {apiIngredients.map((ing, i) => (
               <li key={i}>
                 <span className="measure">{ing.measure}</span>
