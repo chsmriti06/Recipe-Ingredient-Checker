@@ -90,7 +90,7 @@ function IngredientInput({ onSearch }) {
           disabled={ingredientList.length === 0}
           className="search-btn"
         >
-          🔍 Find Recipes ({ingredientList.length} ingredients)
+          Find Recipes ({ingredientList.length} ingredients)
         </button>
       </div>
 

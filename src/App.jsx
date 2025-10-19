@@ -6,6 +6,22 @@ import GeminiRecipeResults from './components/GeminiRecipeResults';
 import GeminiRecipeDetail from './components/GeminiRecipeDetail';
 import './App.css';
 
+import { FaHome, FaUserAlt, FaSearch, FaBell, FaHeart, FaBars } from "react-icons/fa";
+
+
+function TopBar() {
+  return (
+    <div className="top-bar">
+      <FaHome className="icon" />
+      <FaUserAlt className="icon" />
+      <FaSearch className="icon" />
+      <FaHeart className="icon"/>
+      <FaBell className="icon"/>
+      <FaBars className="icon"/>
+    </div>
+  );
+}
+  
 function App() {
   const [recipes, setRecipes] = useState(null);
   const [selectedRecipe, setSelectedRecipe] = useState(null);
@@ -42,10 +58,32 @@ function App() {
 
   return (
     <div className="app">
-      <header className="header">
-        <h1>🍜 College Recipe Finder</h1>
-        {/* <p className="tagline">AI-powered recipes from what you've got</p> */}
-      </header>
+
+      <div className="top-bar">
+        <div className="left-side">
+         <FaSearch className="icon" />
+         <FaHome className="icon" />
+        </div>
+        <div className="right-side">
+         <FaHeart className ="icon"/>
+         <FaBars className ="icon"/>
+        </div>
+        <div className="center">
+          <p>collegerecipes@cravings.com</p>
+        </div>
+      </div>
+      <div className="top-section">
+       <div className="overlay">
+         <h1>College Recipe Finder</h1>
+       </div>
+
+           {/* Move the zigzag divider inside the top-section */}
+       <div className="zigzag-divider">
+         <svg viewBox="0 0 1200 100" preserveAspectRatio="none">
+           <path d="M0,0 50,50 100,0 150,50 200,0 250,50 300,0 350,50 400,0 450,50 500,0 550,50 600,0 650,50 700,0 750,50 800,0 850,50 900,0 950,50 1000,0 1050,50 1100,0 1150,50 1200,0 V100 H0 Z" />
+         </svg>
+       </div>
+     </div>
 
       <main className="main-content">
         <IngredientInput onSearch={handleSearch} />
