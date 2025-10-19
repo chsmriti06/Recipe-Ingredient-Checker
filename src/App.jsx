@@ -69,12 +69,13 @@ function App() {
          <FaBars className ="icon"/>
         </div>
         <div className="center">
-          <p>collegerecipes@cravings.com</p>
+          <p>dormdinners@cravings.com</p>
         </div>
       </div>
       <div className="top-section">
        <div className="overlay">
-         <h1>College Recipe Finder</h1>
+         <h1>Dorm Dinners</h1>
+         <p className="tagline">AI-powered recipes made from what’s already in your pantry</p>
        </div>
 
            {/* Move the zigzag divider inside the top-section */}
@@ -118,6 +119,9 @@ function App() {
           />
         )}
       </main>
+        <footer className="footer">
+          <p>© 2025 Dorm Dinners | Made with ❤️ at TAMU</p>
+       </footer>
     </div>
   );
 }
